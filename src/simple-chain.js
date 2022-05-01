@@ -6,8 +6,8 @@ const { NotImplementedError } = require('../extensions/index.js');
  */
 const chainMaker = {
   getLength() {
-    throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+    const length = arguments[0].split('~~').length
+    return length
   },
   addLink(/* value */) {
     throw new NotImplementedError('Not implemented');
