@@ -23,13 +23,13 @@ const { NotImplementedError } = require('../extensions/index.js');
       for (let i = 0; i < array.length; i++) {
         if (Array.isArray(array[i])) {
             depth += 1
+            if (i = array[i].length - 1 && result < depth) {
+              result = depth
+              depth = 1
+            }
             calc(array[i], depth)
           }
-        else {
-          calc(array[i], depth)
-        }
       }
-      result = depth
     })(array) 
     return result
 }
